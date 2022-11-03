@@ -17,8 +17,8 @@ prefix_pattern = re.compile(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\/?\d?\d?)')
 route_pattern = re.compile(r'via (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})')
 
 # Connect to device and run 'show ip route' command
-print('--- connecting telnet 192.168.232.131 with prne/cisco123!')
-session = pexpect.spawn('telnet 192.168.232.131', encoding='utf-8',
+print('--- connecting telnet 192.168.56.130 with prne/cisco123!')
+session = pexpect.spawn('telnet 192.168.56.130', encoding='utf-8',
                         timeout=20)
 result = session.expect(['Username:', pexpect.TIMEOUT, pexpect.EOF])
 
@@ -93,5 +93,5 @@ pprint(intf_routes)
 # Display a blank line to make easier to read
 print('') 
 
-# Close the file
-file.close() 
+# Close the session
+session.close()
