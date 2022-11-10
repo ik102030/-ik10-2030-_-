@@ -6,10 +6,10 @@ def backup():
     password = getpass.getpass()
 
     #opening myswitches and creating it in the python script
-    f = open('myswitches', 'w')
+    f = open('myswitches3', 'w')
     f.write("192.168.232.131")
     f.close()
-    f=open('myswitches', 'r')
+    f=open('myswitches3', 'r')
 
     for ip in f:
         ip=ip.strip()
@@ -33,4 +33,4 @@ def backup():
         saveoutput.write(readoutput.decode('ascii'))
         saveoutput.write("\n")
         saveoutput.close
-backup()   
+backup()    
