@@ -7,7 +7,7 @@ def backup():
 
     #opening myswitches and creating it in the python script
     f = open('myswitches2', 'w')
-    f.write("192.168.56.101")
+    f.write("192.168.56.130")
     f.close()
     f=open('myswitches2', 'r')
 
