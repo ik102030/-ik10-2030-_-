@@ -1,4 +1,4 @@
-#importing ConnectHandler from netmimo to connect to the 2 routers
+#importing ConnectHandler from netmiko to connect to the 2 routers
 from netmiko import ConnectHandler 
 #credentials to connect to router 1
 iosv_R1 = { 
