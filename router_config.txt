@@ -1,0 +1,16 @@
+router ospf 1
+network 192.168.1.1 0.0.0.255 area 0
+router ospf 2
+network 192.168.1.2 0.0.0.255 area 1
+router ospf 3
+network 192.168.1.3 0.0.0.255 area 2
+
+router eigrp 10
+network 192.168.1.244 0.0.0.3
+
+router rip
+network 192.168.1.0
+
+int lo1
+ip add 192.168.1.121 255.255.255.0
+no shut
