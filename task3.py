@@ -18,7 +18,7 @@ iosv_R2 = {
     
 }
 #opening the router ospf file that contains the info for the configuration
-with open('router_ospf') as f:
+with open('router_config') as f:
     lines = f.read().splitlines()
 #putting the two routers into a dictionary and storing it into all_devices
 all_devices = [iosv_R1, iosv_R2]
@@ -27,6 +27,3 @@ for devices in all_devices:
     net_connect = ConnectHandler(**devices) #using the ConnectHandler and storing it into the net_connect variable
     output = net_connect.send_config_set(lines) #sending the notepad configuration into the net_connect and storing it into the output variable
     print(output) #printing out the configuration
-
-
-
